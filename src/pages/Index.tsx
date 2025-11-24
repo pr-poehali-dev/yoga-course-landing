@@ -144,6 +144,54 @@ export default function Index() {
         </div>
       </section>
 
+      <section className="py-16 bg-secondary/20">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="animate-fade-in">
+              <Badge className="mb-4 bg-primary/90">О магазине</Badge>
+              <h2 className="text-4xl font-bold mb-6 text-foreground">
+                РукоДелие — ваш надёжный партнёр в творчестве
+              </h2>
+              <div className="space-y-4 text-muted-foreground">
+                <p>
+                  Мы работаем с 2015 года и за это время помогли тысячам рукодельниц воплотить свои творческие идеи в жизнь. 
+                  Наш магазин специализируется на продаже качественных материалов для всех видов рукоделия.
+                </p>
+                <p>
+                  В нашем ассортименте только проверенные бренды: DMC, YarnArt, Gamma, Pony. Мы лично тестируем каждый товар 
+                  перед тем, как добавить его в каталог, поэтому гарантируем высокое качество всей продукции.
+                </p>
+                <p>
+                  Наша команда состоит из опытных рукодельниц, которые всегда готовы помочь с выбором материалов 
+                  и проконсультировать по любым вопросам. Мы не просто продаём товары — мы помогаем создавать шедевры!
+                </p>
+              </div>
+              <div className="grid grid-cols-3 gap-6 mt-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary mb-1">9 лет</div>
+                  <div className="text-sm text-muted-foreground">на рынке</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary mb-1">15000+</div>
+                  <div className="text-sm text-muted-foreground">довольных клиентов</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary mb-1">500+</div>
+                  <div className="text-sm text-muted-foreground">товаров в каталоге</div>
+                </div>
+              </div>
+            </div>
+            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <img 
+                src="https://cdn.poehali.dev/projects/ad0f5deb-23d3-4a01-84f2-3dc5225eca52/files/1832d0a2-191a-46e0-b6ba-d6fcd9076ca8.jpg"
+                alt="О магазине"
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-12 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="mb-8">
