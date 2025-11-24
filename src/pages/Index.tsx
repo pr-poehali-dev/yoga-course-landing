@@ -240,6 +240,61 @@ export default function Index() {
         </div>
       </section>
 
+      <section className="py-16 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Отзывы покупателей</h2>
+            <p className="text-muted-foreground">Что говорят наши клиенты о покупках</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                name: "Анна Петрова",
+                rating: 5,
+                text: "Заказывала набор пряжи «Радуга» — качество превосходное! Цвета яркие, нитки не линяют. Связала внучке плед, получилось очень красиво. Доставка быстрая, всё упаковано аккуратно.",
+                date: "15 ноября 2024",
+                purchase: "Набор пряжи «Радуга»"
+              },
+              {
+                name: "Мария Соколова",
+                rating: 5,
+                text: "Отличный магазин! Покупала спицы и крючки — всё как на картинках, качество на высоте. Цены приятные, особенно порадовала скидка на набор. Буду заказывать ещё!",
+                date: "8 ноября 2024",
+                purchase: "Профессиональные спицы"
+              },
+              {
+                name: "Елена Кузнецова",
+                rating: 4,
+                text: "Заказала нитки мулине для вышивания. Большой выбор оттенков, качество DMC всегда на высоте. Единственное — доставка чуть задержалась, но менеджер предупредил заранее. В целом довольна!",
+                date: "2 ноября 2024",
+                purchase: "Нитки мулине DMC"
+              }
+            ].map((review, idx) => (
+              <Card key={idx} className="animate-scale-in hover:shadow-lg transition-all" style={{ animationDelay: `${idx * 0.1}s` }}>
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-semibold text-lg">{review.name}</h3>
+                    <div className="flex gap-1">
+                      {Array.from({ length: review.rating }).map((_, i) => (
+                        <Icon key={i} name="Star" size={16} className="text-accent fill-accent" />
+                      ))}
+                    </div>
+                  </div>
+                  <Badge variant="secondary" className="w-fit text-xs">
+                    {review.purchase}
+                  </Badge>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground mb-3">{review.text}</p>
+                  <p className="text-xs text-muted-foreground">{review.date}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {getTotalItems() > 0 && (
         <div className="fixed bottom-6 right-6 z-50 animate-scale-in">
           <Card className="shadow-2xl border-2 border-primary w-80">
